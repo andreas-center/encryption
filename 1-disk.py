@@ -58,4 +58,6 @@ def execute():
     output.null("pacstrap -i /mnt base base-devel")
     output.null("genfstab -U -p /mnt >> /mnt/etc/fstab")
 
+    print(line)
+
 execute()
