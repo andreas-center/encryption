@@ -38,4 +38,4 @@ def run():
     execute("mkinitcpio -p linux")
     print(print_message("Copying 'pacman.conf' to '/etc/pacman.conf'"))
     execute("cp files/pacman.conf /etc/pacman.conf")
-    print(line)
+    print(print_line)
