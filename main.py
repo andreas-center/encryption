@@ -2,6 +2,7 @@ import sys
 import os
 import inc.functions
 import inc.install.prepair
+import inc.install.installation
 
 printMessage = inc.functions.lines.message
 printQuestion = inc.functions.lines.question
@@ -20,6 +21,7 @@ def run():
             inc.install.prepair.run()
             sys.exit()
         if choice == "2":
+            inc.install.installation.run()
             sys.exit()
         else:
             print(printMessage("I did not understand that. Try again!"))
