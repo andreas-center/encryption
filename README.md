@@ -6,4 +6,4 @@ With these scripts you'll be able to install arch linux with a two-way authentic
 This is a dirty build that I threw together for myself. It requires that your systemdisk is /dev/sda and your empty USB disk is at /dev/sda.(i'll fix that later). You will also need to prepair your disks before you run the script (use cfdisk). Your systemdisk should be set typ use 'linux LVM' and your usb disk should be set to 'bootable'.
 
 ## Instructions
-Run bash.sh after you've prepaired your disks. After the first step is done you run the file again and chose number two (2).
+Run bash.sh after you've prepaired your disks. After the first step is done you run the file again (make sure you're chrooted) and chose number two (2).
