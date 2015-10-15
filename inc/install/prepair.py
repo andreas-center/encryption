@@ -64,10 +64,10 @@ class Run:
         print(printMessage("Generating fstab"))
         os.system("genfstab -U -p /mnt >> /mnt/etc/fstab > /dev/null")
         print(printMessage("Moving folder 'files' to '/mnt'"))
-        os.sustem("cp -r files /mnt/ > /dev/null")
+        os.system("cp -r files /mnt/ > /dev/null")
         input(printMessage("You've now installed the base system! Press [enter] to continue "))
         print(printMessage("Running 'arch-chroot'"))
-        os.sustem("arch-chroot /mnt /bin/bash > /dev/null")
+        os.system("arch-chroot /mnt /bin/bash > /dev/null")
 
 
 run = Run()
