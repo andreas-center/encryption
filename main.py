@@ -18,7 +18,9 @@ def run():
         print(printMessage("2 : Edit files and start configuring your system (not available yet)"))
         choice = input(printQuestion(": "))
         if choice == "1":
-            inc.install.prepair.run()
+            inc.install.prepair.run.encryption()
+            inc.install.prepair.run.filesystem()
+            inc.install.prepair.run.baseSystem()
             sys.exit()
         if choice == "2":
             inc.install.installation.run()
