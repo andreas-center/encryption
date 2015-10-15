@@ -24,7 +24,7 @@ class Run:
         os.system('vgcreate store /dev/mapper/enc > /dev/null')
         print(printMessage("Please specify the size of your logical volumes"))
         self.root = input(printQuestion("Set the size of your root volume [G] : "))
-        self.root = input(printQuestion("Set the size of your swap volume [G] : "))
+        self.swap = input(printQuestion("Set the size of your swap volume [G] : "))
         os.system("lvcreate -L " + self.root + " store -n root > /dev/null")
         os.system("lvcreate -L " + self.swap + " store -n swap > /dev/null")
         print(printExclamation("Your home volume will use all remaining space [+100%FREE]"))
