@@ -19,7 +19,7 @@ class Run:
         print(printMessage("Running luksFormat with 'header.img'"))
         os.system('cryptsetup luksFormat ' + self.disk1 + ' --header header.img')
         print(printMessage("Unlocking '/dev/sda'"))
-        os.system('cryptsetup open --header header.img --type luks " + disk1 + " enc > /dev/null')
+        os.system('cryptsetup open --header header.img --type luks ' + self.disk1 + ' enc')
         os.system('pvcreate /dev/mapper/enc > /dev/null')
         os.system('vgcreate store /dev/mapper/enc > /dev/null')
         print(printMessage("Please specify the size of your logical volumes"))
