@@ -17,7 +17,7 @@ class Run:
         self.disk2 = input(printQuestion("Specify your USB stick. (/dev/sdx) : "))
         print(printMessage("Using " + self.disk2 + " as USB stick."))
         print(printMessage("Running luksFormat with 'header.img'"))
-        os.system('cryptsetup luksFormat ' + disk1 + ' --header header.img')
+        os.system('cryptsetup luksFormat ' + self.disk1 + ' --header header.img')
         print(printMessage("Unlocking '/dev/sda'"))
         os.system('cryptsetup open --header header.img --type luks " + disk1 + " enc > /dev/null')
         os.system('pvcreate /dev/mapper/enc > /dev/null')
