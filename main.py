@@ -12,7 +12,8 @@ def run():
     disks = input(printExclamation("Don't forget to setup your disks! Is this done? [Y/N] : "))
     if disks == "N" or disks == "n":
         print(printMessage("Please go back and setup your disks before running this script. (Use cfdisk)\n\n"))
-    if disks == "Y" or disks == "y":
+        sys.exit()
+if disks == "Y" or disks == "y":
         print(printQuestion("What do you want to do?"))
         print(printMessage("1 : Prepair your system disk and USB stick"))
         print(printMessage("2 : Edit files and start configuring your system (not available yet)"))
