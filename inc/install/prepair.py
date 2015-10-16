@@ -63,13 +63,7 @@ class Run:
         os.system("pacstrap -i /mnt base base-devel > /dev/null")
         print(printMessage("Generating fstab"))
         os.system("genfstab -U -p /mnt >> /mnt/etc/fstab > /dev/null")
-        print(printMessage("Moving folder 'files' to '/mnt'"))
-        os.system("mkdir arch-install")
-        os.system("cp -r * arch-install")
-        os.system("cp -r arch-install /mnt/ > /dev/null")
-        input(printMessage("You've now installed the base system! Press [enter] to continue "))
-        print(printMessage("Running 'arch-chroot'"))
-        os.system("arch-chroot /mnt /bin/bash > /dev/null")
+        input(printMessage("You've now installed the base system! Pleace move your 'arch-install' folder to '/mnt/' and then run 'arch-chroot /mnt /bin/bash'. Press [enter] to exit "))
 
 
 run = Run()
