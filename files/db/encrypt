@@ -1,0 +1,8 @@
+truncate -s 2M header.img
+cryptsetup luksFormat /dev/sda --header header.img
+cryptsetup open --header header.img --type luks /dev/sda enc
+pvcreate /dev/mapper/enc
+vgcreate store /dev/mapper/enc
+lvcreate -L 20G store -n root
+lvcreate -L 4G store -n swap
+lvcreate -l +100%FREE store -n home

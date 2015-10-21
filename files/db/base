@@ -1,0 +1,3 @@
+pacstrap -i /mnt base base-devel
+genfstab -U -p /mnt >> /mnt/etc/fstab
+arch-chroot /mnt /bin/bash
