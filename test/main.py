@@ -24,6 +24,8 @@ filesystem_count = system_output.count('filesystem')
 filesystem_print = system_output.print_cmd('filesystem')
 base_count = system_output.count('base')
 base_print = system_output.print_cmd('base')
+edit_files_count = system_output.count('edit_files')
+edit_files_print = system_output.print_cmd('edit_files')
 # ---------------------------------- #
 input(print_line.message("Press [ENTER] to setup the encryption "))
 for x in range(0,encrypt_count):
@@ -37,3 +39,7 @@ input(print_line.message("Press [ENTER] to setup the base system "))
 for x in range(0,base_count):
     print(base_print[x])
 # ---------------------------------- #
+input(print_line.message("Press [ENTER] to setup the files"))
+for x in range(0,edit_files_count):
+    print(edit_files_print[x])
+

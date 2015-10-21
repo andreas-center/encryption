@@ -1,0 +1,18 @@
+cp files/locale.gen /etc/locale.gen
+locale-gen
+echo LANG=sv_SE.UTF-8 > /etc/locale.conf 
+export LANG=sv_SE.UTF-8
+cp files/vconsole.conf /etc/vconsole.conf 
+ln -s /usr/share/zoneinfo/Europe/Stockholm /etc/localtime 
+hwclock --systohc --utc
+echo laptop > /etc/hostname 
+cp /lib/initcpio/hooks/encrypt{,2}
+cp /usr/lib/initcpio/install/encrypt{,2}
+cp files/encrypt2 /lib/initcpio/hooks/encrypt2
+cp files/mkinitcpio.conf /etc/mkinitcpio.conf 
+pacman -S grub
+cp files/grub /etc/default/grub
+grub-install --recheck /dev/sdb
+grub-mkconfig -o /boot/grub/grub.cfg 
+mkinitcpio -p linux 
+
