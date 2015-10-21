@@ -3,7 +3,7 @@ import sys
 # ---------------------------------- #
 class print_line:
     def message(self,value):
-        return "[*] %s" % value
+        return " \033[91m[\033[0m\033[92m*\033[0m\033[91m]\033[0m\033[93m %s \033[0m" % value
 print_line = print_line()
 # ---------------------------------- #
 class system_output:
