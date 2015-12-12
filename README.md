@@ -3,6 +3,12 @@
 ## ABOUT
 With these scripts you'll be able to install arch linux with a two-way authentication. You'll be abke to login with a password and a usb stick. GRUB and the LUKS header will be stored on the USB stick which makes it impossible to boot the system as the luks header is unique to your system disk.
 
-This is a dirty build that I threw together for myself. It requires that your systemdisk is /dev/sda and your empty USB disk is at /dev/sda.(i'll fix that later). You will also need to prepair your disks before you run the script (use cfdisk). Your systemdisk should be set typ use 'linux LVM' and your usb disk should be set to 'bootable'.
+It requires that your systemdisk is /dev/sda and your empty USB disk is at /dev/sdb. 
+## Howto
+use cfdisk to setup your disks. Your system disk should use all of your space and also set to "Lunx LVM". The USB device should have the boot flag set to on. When you've done this you can run the prepair.sh script wich will create the luks encryption,setup the filsystem, install base and and finaly it will throw you into chroot. When the script has finnished you can continue from #5 in the arch-install.md file. All documentation is available on the arch wik.
 ## Video
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/RffpFvku2SQ/0.jpg)](http://www.youtube.com/watch?v=RffpFvku2SQ)
+
+## Links
+* [Encrypt an entinre system](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Plain_dm-crypt)
+* [Arch WIKI - Remote LUKS header](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Encrypted_system_using_a_remote_LUKS_header)
