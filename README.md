@@ -10,5 +10,5 @@ use cfdisk to setup your disks. Your system disk should use all of your space an
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/RffpFvku2SQ/0.jpg)](http://www.youtube.com/watch?v=RffpFvku2SQ)
 
 ## Links
-* [Encrypt an entinre system](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Plain_dm-crypt)
-* [Arch WIKI - Remote LUKS header](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Encrypted_system_using_a_remote_LUKS_header)
+* [Arch wiki - Encrypt an entinre system](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Plain_dm-crypt)
+* [Arch wiki - Remote LUKS header](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Encrypted_system_using_a_remote_LUKS_header)
