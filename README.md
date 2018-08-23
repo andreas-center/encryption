@@ -1,4 +1,7 @@
 # Arch Linux installation with remote GRUB2 / LUKS header
+
+(This walkthrough was mainly created for myself but i thought i could share it publicly)
+
 ## ABOUT
 With this documentation you'll install arch linux with a two-way authentication. You'll be abke to login with a password and a usb stick. GRUB and the LUKS header will be stored on the USB stick which makes it impossible to boot the system as the luks header is unique to your system disk.
 
