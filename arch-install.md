@@ -60,8 +60,6 @@ I did **NOT** use UEFI for this setup
 
 `mv header.img /mnt/boot`
 
-truncate -s 2M header.img && cryptsetup luksFormat /dev/sda --header header.img && cryptsetup open --header header.img --type luks /dev/sda enc && pvcreate /dev/mapper/enc && vgcreate store /dev/mapper/enc && lvcreate -L 20G store -n root && lvcreate -L 4G store -n swap && lvcreate -l +100%FREE store -n home && mkfs.ext4 /dev/store/root && mkfs.ext4 /dev/store/home && mount /dev/store/root /mnt && mkdir /mnt/home && mount /dev/store/home /mnt/home && mkswap /dev/store/swap && swapon /dev/store/swap && mkfs.ext2 /dev/sdb1 && mkdir /mnt/boot && mount /dev/sdb1 /mnt/boot && mv header.img /mnt/boot
-
 ## **4. Install base system**
 
 `pacstrap -i /mnt base base-devel`
